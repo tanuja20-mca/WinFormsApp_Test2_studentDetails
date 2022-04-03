@@ -41,9 +41,12 @@ namespace WinFormsApp_Test2_studentDetails
             this.btnFirst = new System.Windows.Forms.Button();
             this.btnSecond = new System.Windows.Forms.Button();
             this.btnThird = new System.Windows.Forms.Button();
-            this.txt1Rank = new System.Windows.Forms.TextBox();
-            this.txt2Rank = new System.Windows.Forms.TextBox();
-            this.txt3Rank = new System.Windows.Forms.TextBox();
+            this.txtName1Rank = new System.Windows.Forms.TextBox();
+            this.txtName2Rank = new System.Windows.Forms.TextBox();
+            this.txtName3Rank = new System.Windows.Forms.TextBox();
+            this.txtTotal1Rank = new System.Windows.Forms.TextBox();
+            this.txtTotal2Rank = new System.Windows.Forms.TextBox();
+            this.txtTotal3Rank = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblName
@@ -150,36 +153,60 @@ namespace WinFormsApp_Test2_studentDetails
             this.btnThird.UseVisualStyleBackColor = true;
             this.btnThird.Click += new System.EventHandler(this.btnThird_Click);
             // 
-            // txt1Rank
+            // txtName1Rank
             // 
-            this.txt1Rank.Location = new System.Drawing.Point(197, 365);
-            this.txt1Rank.Name = "txt1Rank";
-            this.txt1Rank.Size = new System.Drawing.Size(125, 27);
-            this.txt1Rank.TabIndex = 12;
-            this.txt1Rank.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtName1Rank.Location = new System.Drawing.Point(197, 365);
+            this.txtName1Rank.Name = "txtName1Rank";
+            this.txtName1Rank.Size = new System.Drawing.Size(125, 27);
+            this.txtName1Rank.TabIndex = 12;
+            this.txtName1Rank.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // txt2Rank
+            // txtName2Rank
             // 
-            this.txt2Rank.Location = new System.Drawing.Point(197, 430);
-            this.txt2Rank.Name = "txt2Rank";
-            this.txt2Rank.Size = new System.Drawing.Size(125, 27);
-            this.txt2Rank.TabIndex = 13;
+            this.txtName2Rank.Location = new System.Drawing.Point(197, 430);
+            this.txtName2Rank.Name = "txtName2Rank";
+            this.txtName2Rank.Size = new System.Drawing.Size(125, 27);
+            this.txtName2Rank.TabIndex = 13;
             // 
-            // txt3Rank
+            // txtName3Rank
             // 
-            this.txt3Rank.Location = new System.Drawing.Point(197, 491);
-            this.txt3Rank.Name = "txt3Rank";
-            this.txt3Rank.Size = new System.Drawing.Size(125, 27);
-            this.txt3Rank.TabIndex = 14;
+            this.txtName3Rank.Location = new System.Drawing.Point(197, 491);
+            this.txtName3Rank.Name = "txtName3Rank";
+            this.txtName3Rank.Size = new System.Drawing.Size(125, 27);
+            this.txtName3Rank.TabIndex = 14;
+            // 
+            // txtTotal1Rank
+            // 
+            this.txtTotal1Rank.Location = new System.Drawing.Point(361, 365);
+            this.txtTotal1Rank.Name = "txtTotal1Rank";
+            this.txtTotal1Rank.Size = new System.Drawing.Size(125, 27);
+            this.txtTotal1Rank.TabIndex = 15;
+            // 
+            // txtTotal2Rank
+            // 
+            this.txtTotal2Rank.Location = new System.Drawing.Point(361, 428);
+            this.txtTotal2Rank.Name = "txtTotal2Rank";
+            this.txtTotal2Rank.Size = new System.Drawing.Size(125, 27);
+            this.txtTotal2Rank.TabIndex = 16;
+            // 
+            // txtTotal3Rank
+            // 
+            this.txtTotal3Rank.Location = new System.Drawing.Point(361, 490);
+            this.txtTotal3Rank.Name = "txtTotal3Rank";
+            this.txtTotal3Rank.Size = new System.Drawing.Size(125, 27);
+            this.txtTotal3Rank.TabIndex = 17;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 667);
-            this.Controls.Add(this.txt3Rank);
-            this.Controls.Add(this.txt2Rank);
-            this.Controls.Add(this.txt1Rank);
+            this.Controls.Add(this.txtTotal3Rank);
+            this.Controls.Add(this.txtTotal2Rank);
+            this.Controls.Add(this.txtTotal1Rank);
+            this.Controls.Add(this.txtName3Rank);
+            this.Controls.Add(this.txtName2Rank);
+            this.Controls.Add(this.txtName1Rank);
             this.Controls.Add(this.btnThird);
             this.Controls.Add(this.btnSecond);
             this.Controls.Add(this.btnFirst);
@@ -216,6 +243,13 @@ namespace WinFormsApp_Test2_studentDetails
         private System.Windows.Forms.TextBox txt1Rank;
         private System.Windows.Forms.TextBox txt2Rank;
         private System.Windows.Forms.TextBox txt3Rank;
+        private System.Windows.Forms.TextBox txtTRank;
+        private System.Windows.Forms.TextBox txtName1Rank;
+        private System.Windows.Forms.TextBox txtName2Rank;
+        private System.Windows.Forms.TextBox txtName3Rank;
+        private System.Windows.Forms.TextBox txtTotal1Rank;
+        private System.Windows.Forms.TextBox txtTotal2Rank;
+        private System.Windows.Forms.TextBox txtTotal3Rank;
     }
 }
 

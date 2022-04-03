@@ -45,34 +45,44 @@ namespace WinFormsApp_Test2_studentDetails
 
         private void btnFirst_Click(object sender, EventArgs e)
         {
-           
             SqlCommand cmd = new SqlCommand("First_Rank", con);
             cmd.CommandType = CommandType.StoredProcedure;
             con.Open();
-            SqlParameter returnParameter = cmd.Parameters.Add("RetVal", SqlDbType.Int);
-            returnParameter.Direction = ParameterDirection.ReturnValue;
-            cmd.ExecuteNonQuery();
 
-            int result = (int)returnParameter.Value;
-            txt1Rank.Text = result.ToString();
+            cmd.Parameters.Add(new SqlParameter("@empname", SqlDbType.VarChar, 20, ParameterDirection.Output, false, 0, 20, "ename", DataRowVersion.Default, null));
+            cmd.Parameters.Add(new SqlParameter("@total", SqlDbType.Int, 20, ParameterDirection.Output, false, 0, 10, "total", DataRowVersion.Default, null));  
+            cmd.UpdatedRowSource = UpdateRowSource.OutputParameters;
+            cmd.ExecuteNonQuery();
+            string name = (string)cmd.Parameters["@empname"].Value;
+            int total = Convert.ToInt32(cmd.Parameters["@total"].Value);
+            txtName1Rank.Text = name.ToString();
+            txtTotal1Rank.Text = total.ToString();
 
             con.Close();
+
         }
 
         private void btnSecond_Click(object sender, EventArgs e)
         {
-
+          
             SqlCommand cmd = new SqlCommand("Second_Rank", con);
             cmd.CommandType = CommandType.StoredProcedure;
             con.Open();
-            SqlParameter returnParameter = cmd.Parameters.Add("RetVal", SqlDbType.Int);
-            returnParameter.Direction = ParameterDirection.ReturnValue;
-            cmd.ExecuteNonQuery();
 
-            int result = (int)returnParameter.Value;
-            txt2Rank.Text = result.ToString();
+
+            cmd.Parameters.Add(new SqlParameter("@empname", SqlDbType.VarChar, 20, ParameterDirection.Output, false, 0, 20, "ename", DataRowVersion.Default, null));
+            cmd.Parameters.Add(new SqlParameter("@total", SqlDbType.Int, 20, ParameterDirection.Output, false, 0, 10, "total", DataRowVersion.Default, null));
+
+            cmd.UpdatedRowSource = UpdateRowSource.OutputParameters;
+            cmd.ExecuteNonQuery();
+            string name = (string)cmd.Parameters["@empname"].Value;
+            int total = Convert.ToInt32(cmd.Parameters["@total"].Value);
+            txtName2Rank.Text = name.ToString();
+            txtTotal2Rank.Text = total.ToString();
 
             con.Close();
+
+           
         }
 
         private void btnThird_Click(object sender, EventArgs e)
@@ -80,12 +90,17 @@ namespace WinFormsApp_Test2_studentDetails
             SqlCommand cmd = new SqlCommand("Third_Rank", con);
             cmd.CommandType = CommandType.StoredProcedure;
             con.Open();
-            SqlParameter returnParameter = cmd.Parameters.Add("RetVal", SqlDbType.Int);
-            returnParameter.Direction = ParameterDirection.ReturnValue;
-            cmd.ExecuteNonQuery();
 
-            int result = (int)returnParameter.Value;
-            txt3Rank.Text = result.ToString();
+
+            cmd.Parameters.Add(new SqlParameter("@empname", SqlDbType.VarChar, 20, ParameterDirection.Output, false, 0, 20, "ename", DataRowVersion.Default, null));
+            cmd.Parameters.Add(new SqlParameter("@total", SqlDbType.Int, 20, ParameterDirection.Output, false, 0, 10, "total", DataRowVersion.Default, null));
+
+            cmd.UpdatedRowSource = UpdateRowSource.OutputParameters;
+            cmd.ExecuteNonQuery();
+            string name = (string)cmd.Parameters["@empname"].Value;
+            int total = Convert.ToInt32(cmd.Parameters["@total"].Value);
+            txtName3Rank.Text = name.ToString();
+            txtTotal3Rank.Text = total.ToString();
 
             con.Close();
         }
